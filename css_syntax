@@ -1,0 +1,33 @@
+CSS Syntax
+-CSS rule consists of selector and declaraton block
+
+CSS Syntax
+
+Selector Declaration
+h1 {
+  color: blue; 
+  font-size: 12px;
+}
+
+h1 -> selector
+color -> property
+blue; -> value
+
+selector -> points to HTML element you want style
+declaration block -> contains 1 or more declarations separated by semicolons
+each declaration includes CSS property name and value, seperated by colon
+multiple CSS declarations seperated by semicolons and declaration blocks are surrounded by curly braces
+
+
+ex.
+p {
+  color: red;
+  text-align: center;
+}
+
+explained:
+p -> selector in CSS (points to HTML element you want to style <p>)
+color -> property and red is property value
+text-align -> property and center is property value
+
+

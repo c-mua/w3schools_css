@@ -1,0 +1,145 @@
+CSS Selectors
+-selects HTML element(s) you want to style
+
+CSS Selectors
+-used to "find" (select) the HTML elements you want to style
+
+We can divide CSS selectors into 5 categories:
+-simple selectors (select elements based on name, id, class)
+-combinator selectors (select elements based on specific relationship between them)
+-pseudo-class selectors (select elements based on certain state)
+-pseudo-elements selectors (select and style part of element)
+-attribute selectors (select elements based on attribute or attribute value)
+
+
+CSS element selector 
+-selects HTML elements based on element name
+ex.
+p {
+  text-align: center;
+  color: red;
+}
+-all <p> elements on page be center-aligned with red text color
+
+
+CSS id selector
+-uses id attribute of HTML element to select specific element
+-id of element is unique within page, id selector used to select one unique element
+-to select element with specific id, write hash (#) character, followed by id of element
+ex.
+#para1 {
+  text-align: center;
+  color: red;
+}
+** id name cannot start with number **
+
+
+CSS class selector
+-selects HTML elements with specific class attribute
+-to select elements with specific class, write period (.) character, followed by class name
+ex.
+.center {
+  text-align: center;
+  color: red;
+}
+-all HTML elements with class="center" becomes red and center-aligned
+-can also specifiy specific HTML elements should be affectd by a class
+
+ex.
+p.center {
+  text-align: center;
+  color: red;
+}
+-only <p> elements with class="center" becomes red and center-aligned
+
+
+HTML elements can also refer to more than one class
+ex.
+<p class="center large">This paragraph refers to two classes.</p>
+** class name cannot start with number **
+
+
+CSS universal selector
+-universal selector (*) selects all HTML elements on page
+ex. 
+* {
+  text-align: center;
+  color: blue;
+}
+-affects every HTML element on page
+
+
+CSS grouping selector
+-selects all HTML elements with same style definitions
+ex.
+h1 {
+  text-align: center;
+  color: red;
+}
+
+h2 {
+  text-align: ceter;
+  color: red;
+}
+
+p {
+  text-align: center;
+  color: red;
+}
+-h1, h2 and p elements have same style definitions
+-better to group the selectors to minimize the code
+
+
+-group selectors, separate each selector with a comma
+ex.
+h1, h2, p {
+  text-align: center;
+  color: red;
+}
+
+
+
+All CSS Simple Selectors
+Selector		Example		Example description
+#id			#firstname	Selects elements with id="firstname"
+.class			.intro		Selects all elements with class="intro"
+element.class		p.intro		Selects only <p> elements with class="intro"
+*			*		Selects all elements
+element			p		Selects all <p> elements
+elements,element,...	div, p		Selects all <div> elements and all <p> elements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

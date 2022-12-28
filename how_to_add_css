@@ -1,0 +1,147 @@
+How to Add CSS
+Three Ways to Insert CSS
+1. External CSS
+2. Internal CSS
+3. Inline CSS
+
+
+External CSS
+-change look of website by changing one file
+-each HTML page must include reference to external style sheet file inside <link> element,
+inside head section
+ex.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>This is a heading.</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+-external style sheet can be written in any text editor and must be saved with .css extension
+-external .css file should not contain any HTML tags
+
+
+style.css
+body{
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+
+** 
+do not add space between property value and unit:
+incorrect (space): margin- left: 20 px;
+correct (nospace): margin-left: 20px; 
+**
+
+
+
+Internal CSS
+-may be used if one single HTML page has unique style
+-defined inside <style> element, inside head section
+ex.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-color: linen;
+      }
+
+     h1 {
+       color: maroon;
+       margin-left: 40px;
+     }
+    </style>
+
+  </head>
+  
+  <body>
+    <h1> This is a heading. </h1>
+    <p> This is a paragraph. </p>
+  </body>
+
+</html>
+-defined within <style> element, inside <head> section of HTML page
+
+
+
+
+Inline CSS
+-apply unique style for single element
+-add style attribute to relevant element
+-style attribute can contain any CSS property
+ex.
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+  <head>
+
+  <body>
+    <h1 style="color: blue; text-align:center;">This is a heading</h1>
+    <p style="color: red;">This is a paragraph</p>
+  </body>
+
+</html>
+** Inline style loses many advantages of style sheet (by mixing content with presentation). Use this method sparingly. **
+
+
+
+
+Multiple Style Sheets
+-If some properties have been defined for same selector (element) in different style sheets
+-value from the last read style sheet be used
+
+ex.
+Assume external style sheet has following style for <h1> element:
+h1 {
+  color: navy;
+}
+
+Assume an internal style sheet also has the following style for <h1> element:
+h1 {
+  color: orange;
+}
+
+if internal style defined AFTER link to external style sheet, <h1> elements becomes "orange"
+ex.
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    h1 {
+      color: orange;
+    }
+  </style>
+</head>
+
+
+if internal style defined BEFORE link to external style sheet, <h1> elements becomes "navy"
+ex.
+<head>
+  <style>
+  h1 {
+    color: orange;
+  }
+  </style>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+Cascading Order
+-What styles used when there is more than one style specified for an HTML element?
+
+-All the styles in page "cascade" into new "virtual" style sheet by following rules, where number one has highest priority:
+1. Inline style (inside HTML element)
+2. External and internal style sheets (in head section)
+3. Browser default
+**inline style has highest priority, and overrides external and internal styles and browser defaults**
