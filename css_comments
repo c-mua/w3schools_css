@@ -1,0 +1,64 @@
+CSS Comments
+-not displayed in browser
+-helps document source code
+
+
+CSS Comments
+-explain the code
+-may help you edit source code at later date
+-comments ignored by browsers
+-placed inside <style> element and starts with /* and ends with */:
+ex.
+/* This is a single-line comment */
+p {
+  color: red;
+}
+
+can add comments wherever you want in code:
+ex.
+p {
+  color: red; /* Set text color to red */
+}
+
+Comments can also span multiple lines:
+ex.
+/* This is
+a mult-line
+comment */
+
+p {
+  color: red;
+}
+
+
+
+
+HTML and CSS Comments
+-can add comments to your HTML source by using <!-- ... -->
+ex.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A Title</title>
+    <style>
+      p {
+        color: red; /* Set text color to red */
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <h2> My Heading </h2>
+
+
+    <!-- These paragraphs will be red.  -->
+    <p> </p>
+    <p> </p>
+    <p> </p>
+
+  </body>
+
+</html>
+
